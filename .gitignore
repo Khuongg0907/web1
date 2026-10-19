@@ -1,4 +1,6 @@
 .env
+.env.*
+!.env.example
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
@@ -6,3 +8,6 @@ mono-images.tar
 mono-backup/
 .qa/node_modules/
 .qa/artifacts/
+sess_*
+Thumbs.db
+.DS_Store
