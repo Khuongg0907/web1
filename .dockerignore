@@ -1,0 +1,9 @@
+# Only the three application sources and runtime configuration enter the build.
+**
+!Dockerfile
+!index.html
+!style.css
+!database.php
+!docker/
+!docker/*.conf
+!docker/*.ini

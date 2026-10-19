@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161616">
+  <meta name="description" content="MONO — Trang phục tối giản cho mỗi ngày. Khám phá áo, quần và cộng đồng secondhand.">
+  <title>MONO — Ít hơn, chất hơn.</title>
+  <link rel="preconnect" href="https://images.unsplash.com"><link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23161616'/%3E%3Ctext x='7' y='30' font-family='Arial' font-size='29' font-weight='bold' fill='white'%3EM%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.5 4.8a5 5 0 0 0-7.1 0L12 6.2l-1.4-1.4a5 5 0 0 0-7.1 7.1L12 21l8.5-9.1a5 5 0 0 0 0-7.1Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 5h11v12H3zM14 9h4l3 4v4h-7"/><circle cx="6.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></symbol>
+  <symbol id="i-return" viewBox="0 0 24 24"><path d="M4 9h10a6 6 0 0 1 0 12M8 4 3 9l5 5"/><path d="M13 3h7v8"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 3c-8 0-15 2-15 9a6 6 0 0 0 6 6c7 0 9-7 9-15Z"/><path d="M3 21 15 9"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 9 5v9l-9 5-9-5V8l9-5Zm0 10 9-5M12 13 3 8m9 5v9M7.5 5.5l9 5"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11a9 9 0 0 1-9 9H4l-2 2V11a9.5 9.5 0 0 1 19 0Z"/><path d="M7 10h10M7 14h6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 12-7 12S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+</svg>
+<div class="announcement">Một tủ đồ gọn hơn. Một phong cách riêng hơn. <span>Miễn phí vận chuyển từ 799.000đ <span aria-hidden="true">↗</span></span></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="#home" aria-label="MONO trang chủ">MONO<span>®</span></a>
+    <nav class="desktop-nav" aria-label="Điều hướng chính">
+      <a href="#shop" data-audience="all">Cửa hàng</a><a href="#shop" data-audience="nam">Nam</a><a href="#shop" data-audience="nữ">Nữ</a><a href="#secondhand">Secondhand <span class="tiny-dot"></span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="search-toggle" aria-label="Tìm sản phẩm"><svg><use href="#i-search"/></svg></button>
+      <button class="icon-btn" id="account-btn" aria-label="Tài khoản"><svg><use href="#i-user"/></svg></button>
+      <button class="icon-btn cart-button" id="cart-btn" aria-label="Giỏ hàng"><svg><use href="#i-bag"/></svg><span id="cart-count">0</span></button>
+    </div>
+  </div>
+  <div class="search-bar" id="search-bar" hidden><div class="container"><svg><use href="#i-search"/></svg><input id="search-input" type="search" placeholder="Tìm áo thun, quần jeans, sơ mi…" aria-label="Tìm sản phẩm"><button class="text-btn" id="search-close">Đóng</button></div></div>
+  <nav class="mobile-nav" aria-label="Điều hướng trên điện thoại"><a href="#shop" data-audience="all">Cửa hàng</a><a href="#shop" data-audience="nam">Nam</a><a href="#shop" data-audience="nữ">Nữ</a><a href="#secondhand">Secondhand ↗</a></nav>
+</header>
+<main id="main">
+  <section class="hero container" id="home" aria-labelledby="hero-title">
+    <div class="hero-copy"><div class="eyebrow"><span class="small-line"></span> THE EVERYDAY COLLECTION</div><h1 id="hero-title">Ít hơn.<br>Chất <em>hơn.</em></h1><p>Những món đồ bạn luôn muốn mặc lại.<br>Tối giản trong thiết kế. Chỉn chu từng chi tiết.</p><a class="btn btn-dark" href="#shop" data-audience="all">Khám phá bộ sưu tập <svg><use href="#i-arrow"/></svg></a><div class="hero-footnote"><span>THIẾT YẾU. VƯỢT THỜI GIAN.</span><span>01 — 08</span></div></div>
+    <div class="hero-visual"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85" alt="Phong cách tối giản với trang phục trung tính" fetchpriority="high"><div class="hero-image-caption"><span>MADE FOR<br>YOUR EVERYDAY.</span><span>MONO STUDIO<br>EST. 2024</span></div><div class="vertical-note">LESS, BUT BETTER.</div></div>
+  </section>
+  <section class="benefits container" aria-label="Cam kết dịch vụ"><div><svg><use href="#i-truck"/></svg><p><strong>Giao hàng toàn quốc</strong><span>Miễn phí cho đơn từ 799.000đ</span></p></div><div><svg><use href="#i-return"/></svg><p><strong>Đổi trả trong 7 ngày</strong><span>Yên tâm chọn, thoải mái mặc</span></p></div><div><svg><use href="#i-leaf"/></svg><p><strong>Mặc lâu. Yêu lâu.</strong><span>Thêm vòng đời cùng Secondhand</span></p></div></section>
+  <section class="shop-section container" id="shop" aria-labelledby="shop-title">
+    <div class="section-heading"><div><div class="eyebrow">YOUR DAILY ROTATION</div><h2 id="shop-title">Những món đồ thiết yếu<span>.</span></h2></div><p>Không cần nhiều. Chỉ cần đúng.</p></div>
+    <div class="catalog-toolbar"><div class="category-tabs" role="group" aria-label="Danh mục"><button data-category="all" class="active">Tất cả <span>08</span></button><button data-category="Áo thun">Áo thun</button><button data-category="Áo sơ mi">Áo sơ mi</button><button data-category="Áo khoác">Áo khoác</button><button data-category="pants">Quần</button></div><label class="sort-label">Sắp xếp <select id="sort-select" aria-label="Sắp xếp sản phẩm"><option value="featured">Nổi bật</option><option value="new">Mới nhất</option><option value="asc">Giá tăng dần</option><option value="desc">Giá giảm dần</option></select></label></div>
+    <div class="filter-row" id="filter-row" hidden><span id="filter-description"></span><button class="text-btn" id="clear-filter">Xóa bộ lọc ×</button></div>
+    <div class="pants-filters" id="pants-filters" role="group" aria-label="Phân loại quần" hidden><button data-pants="all">Tất cả quần</button><button data-pants="Quần jeans">Quần jeans</button><button data-pants="Quần âu">Quần âu</button><button data-pants="Quần short">Quần short</button></div>
+    <div class="product-grid" id="products" aria-live="polite"><div class="loading">Đang tải bộ sưu tập…</div></div>
+    <div class="catalog-footer"><span id="product-count"></span><button class="text-btn" id="favorites-filter"><svg><use href="#i-heart"/></svg> Sản phẩm yêu thích <span id="favorite-count">0</span></button></div>
+  </section>
+  <section class="secondhand-banner container" id="secondhand"><div class="secondhand-image"><img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1000&q=85" alt="Những chiếc áo được treo gọn gàng để trao thêm vòng đời" loading="lazy"><span class="image-stamp">REWEAR.<br>RELOVE.<br>REPEAT.</span></div><div class="secondhand-copy"><div class="eyebrow">MONO / SECOND LIFE</div><h2>Đồ cũ.<br>Câu chuyện <em>mới.</em></h2><p>Phong cách không kết thúc sau lần mặc đầu tiên.<br>Trao lại món đồ bạn yêu. Tìm thấy điều mới cho mình.</p><button class="btn btn-dark" id="community-btn">Ghé cộng đồng Secondhand <svg><use href="#i-arrow"/></svg></button><span class="community-note"><span class="tiny-dot"></span> Cùng nhau, mặc bền vững hơn.</span></div></section>
+  <section class="community-section container" id="community" hidden><div class="section-heading"><div><div class="eyebrow">PRE-LOVED, RE-LOVED</div><h2>Góc trao đổi MONO.</h2></div><button class="btn btn-dark" id="new-listing-btn">+ Đăng món đồ</button></div><p class="section-intro">Trao đổi đồ MONO đã qua sử dụng, hỏi người bán ngay trong bài đăng. Ảnh minh họa theo mẫu sản phẩm; hãy yêu cầu người bán xác nhận tình trạng thực tế.</p><div class="community-grid" id="listings"></div></section>
+  <section class="manifesto container"><span class="eyebrow">THE MONO MINDSET</span><p>Phong cách tốt bắt đầu từ<br>những điều <em>đơn giản.</em></p><span class="manifesto-mark">M.</span></section>
+</main>
+<footer class="site-footer"><div class="container footer-top"><div class="footer-brand"><a class="wordmark" href="#home">MONO<span>®</span></a><p>Ít hơn trong tủ đồ.<br>Nhiều hơn trong trải nghiệm.</p></div><div><h3>Khám phá</h3><a href="#shop" data-audience="all">Tất cả sản phẩm</a><a href="#shop" data-audience="nam">Trang phục nam</a><a href="#shop" data-audience="nữ">Trang phục nữ</a><a href="#secondhand">MONO Secondhand</a></div><div><h3>Đồng hành cùng bạn</h3><button data-account-view="orders">Đơn hàng & vận chuyển</button><button data-account-view="address">Địa chỉ nhận hàng</button><button id="return-policy-btn">Chính sách đổi trả</button><button id="shipping-policy-btn">Phí vận chuyển</button></div><div class="footer-statement"><span>BUY LESS.<br>CHOOSE WELL.<br>MAKE IT LAST.</span><p>Trang phục cho mỗi ngày của bạn.</p></div></div><div class="container footer-bottom"><span>© 2026 MONO Studio. All rights reserved.</span><span>DESIGNED FOR EVERY DAY. <span aria-hidden="true">↗</span></span></div></footer>
+<div class="admin-entry container"><button class="text-btn" id="admin-btn">Quản trị cửa hàng</button></div>
+<dialog id="modal" aria-labelledby="modal-title"><div class="modal-top"><span class="eyebrow">MONO STUDIO</span><button class="icon-btn" id="modal-close" aria-label="Đóng cửa sổ"><svg><use href="#i-close"/></svg></button></div><div id="modal-content"></div></dialog>
+<dialog id="cart-dialog" class="cart-drawer" aria-labelledby="cart-title"><div class="drawer-top"><h2 id="cart-title">Giỏ hàng<span>.</span></h2><button class="icon-btn" id="cart-close" aria-label="Đóng giỏ hàng"><svg><use href="#i-close"/></svg></button></div><div id="cart-content"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+// All interaction code is kept here so the application has exactly three source files.
+const $ = s => document.querySelector(s);
+const money = v => new Intl.NumberFormat('vi-VN').format(v) + 'đ';
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
+const image = (id,w=600) => /^\/api\/media\/[a-f0-9]{32}\.(jpg|png|webp)$/.test(id) ? id : `https://images.unsplash.com/${encodeURIComponent(id)}?auto=format&fit=crop&w=${w}&q=80`;
+const date = v => new Date(v.replace(' ','T')+'Z').toLocaleDateString('vi-VN');
+function readLocal(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
+function writeLocal(key, value) { try { localStorage.setItem(key,JSON.stringify(value)); } catch {} }
+let products=[], currentUser=null, csrf='', cart=[], orders=[], listings=[], activeCategory='all', pantsType='all', audience='all', onlyFavorites=false, favorites=readLocal('mono-favorites',[]), authMode='signin', afterAuth=null, toastTimer, checkoutKey=null, pendingCart=Promise.resolve();
+if(!Array.isArray(favorites)) favorites=[];
+const modal=$('#modal'), drawer=$('#cart-dialog');
+async function api(route,body) {
+  const multipart=body instanceof FormData;
+  const response=await fetch('/api/'+route,{method:body===undefined?'GET':'POST',credentials:'same-origin',headers:body===undefined?{}:{'X-CSRF-Token':csrf,...(multipart?{}:{'Content-Type':'application/json'})},body:body===undefined?undefined:multipart?body:JSON.stringify(body)});
+  let data; try { data=await response.json(); } catch { throw new Error('Máy chủ chưa sẵn sàng. Chạy: php -S 127.0.0.1:8000 database.php'); }
+  if(!response.ok) { const error=new Error(data.error||'Không thể kết nối. Vui lòng thử lại.'); error.status=response.status; throw error; } return data;
+}
+function toast(text) { clearTimeout(toastTimer); $('#toast').textContent=text; $('#toast').classList.add('visible'); toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),4200); }
+function showModal(html,wide=false) { modal.classList.toggle('wide',wide); $('#modal-content').innerHTML=html; if(!modal.open) modal.showModal(); }
+function heading(title,sub='') { return `<h2 id="modal-title">${title}</h2>${sub?`<p class="modal-subtitle">${sub}</p>`:''}`; }
+function empty(title,description,button='') { return `<div class="empty-state">${icon('bag')}<h3>${title}</h3><p>${description}</p>${button}</div>`; }
+function updateHeader() { $('#cart-count').textContent=cart.reduce((n,i)=>n+i.qty,0); $('#account-btn').classList.toggle('signed-in',!!currentUser); $('#account-btn').setAttribute('aria-label',currentUser?'Tài khoản '+currentUser.name:'Đăng nhập'); $('#favorite-count').textContent=favorites.length; }
+function renderProducts() {
+  const term=$('#search-input').value.trim().toLocaleLowerCase('vi');
+  let list=products.filter(p=>(activeCategory==='all'||(activeCategory==='pants'?p.category.startsWith('Quần')&&(pantsType==='all'||p.category===pantsType):p.category===activeCategory))&&(audience==='all'||p.audience===audience||p.audience==='unisex')&&(!onlyFavorites||favorites.includes(p.id))&&(!term||(p.name+' '+p.category).toLocaleLowerCase('vi').includes(term)));
+  const sort=$('#sort-select').value; if(sort==='asc') list.sort((a,b)=>a.price-b.price); if(sort==='desc') list.sort((a,b)=>b.price-a.price); if(sort==='new') list.sort((a,b)=>b.id-a.id);
+  $('#products').innerHTML=list.length?list.map(p=>`<article class="product-card"><div class="product-image"><button class="product-open" data-product="${p.id}" aria-label="Xem ${esc(p.name)}"><img src="${image(p.image)}" alt="${esc(p.name)}" loading="lazy"></button>${p.tag?`<span class="product-tag ${p.old_price?'sale':''}">${esc(p.tag)}</span>`:''}<button class="favorite-btn ${favorites.includes(p.id)?'selected':''}" data-favorite="${p.id}" aria-label="Yêu thích ${esc(p.name)}" aria-pressed="${favorites.includes(p.id)}">${icon('heart')}</button><button class="quick-add" data-product="${p.id}">Chọn kích cỡ <span>+</span></button></div><div class="product-meta"><div><button class="product-title" data-product="${p.id}">${esc(p.name)}</button><p>${esc(p.category)} / ${p.audience==='unisex'?'Unisex':esc(p.audience==='nam'?'Nam':'Nữ')}</p></div><span class="product-price">${money(p.price)}${p.old_price?`<del>${money(p.old_price)}</del>`:''}</span></div><div class="color-swatches">${p.colors.map(c=>`<span title="${esc(c)}" style="background:${colorHex(c)}"></span>`).join('')}<small>${p.colors.length} màu</small></div></article>`).join(''):empty('Chưa tìm thấy món đồ phù hợp.','Thử tìm từ khóa khác hoặc xóa bộ lọc.','<button class="btn btn-dark" data-reset>Khám phá tất cả</button>');
+  $('#product-count').textContent=`Hiển thị ${list.length} / ${products.length} sản phẩm`;
+  $('[data-category="all"] span').textContent=String(products.length).padStart(2,'0');
+  const filters=[audience==='all'?'':`Trang phục ${audience}`,onlyFavorites?'Yêu thích':'',term?`Tìm kiếm: “${$('#search-input').value.trim()}”`:''].filter(Boolean);
+  $('#filter-row').hidden=!filters.length; $('#filter-description').textContent=filters.join(' · ');
+  document.querySelectorAll('[data-category]').forEach(b=>{ b.classList.toggle('active',b.dataset.category===activeCategory); b.setAttribute('aria-pressed',b.dataset.category===activeCategory); });
+  $('#pants-filters').hidden=activeCategory!=='pants';
+  document.querySelectorAll('[data-pants]').forEach(b=>{ b.classList.toggle('active',b.dataset.pants===pantsType); b.setAttribute('aria-pressed',b.dataset.pants===pantsType); });
+  $('#favorites-filter').classList.toggle('selected',onlyFavorites); updateHeader();
+}
+function colorHex(c) { return {'Trắng':'#fff','Đen':'#252525','Xám':'#a5a5a5','Be':'#cbbca9','Xanh denim':'#637d97'}[c]||'#ddd'; }
+function openProduct(id) {
+  const p=products.find(p=>p.id===id); if(!p) return;
+  showModal(`<div class="product-detail"><img src="${image(p.image,900)}" alt="${esc(p.name)}"><div class="detail-info"><span class="eyebrow">MONO / ${esc(p.category)}</span>${heading(esc(p.name))}<p class="detail-price">${money(p.price)} ${p.old_price?`<del>${money(p.old_price)}</del>`:''}</p><p class="detail-description">${esc(p.description)}</p><form id="add-cart-form"><input type="hidden" name="id" value="${p.id}"><fieldset><legend>Màu sắc</legend><div class="variant-options">${p.colors.map((c,i)=>`<label><input type="radio" name="color" value="${esc(c)}" ${i===0?'checked':''}><span><i style="background:${colorHex(c)}"></i>${esc(c)}</span></label>`).join('')}</div></fieldset><fieldset><legend>Kích cỡ <button type="button" class="text-btn" id="size-guide-btn">Hướng dẫn chọn size</button></legend><div class="variant-options sizes">${p.sizes.map((s,i)=>`<label><input type="radio" name="size" value="${esc(s)}" ${(i===1||p.sizes.length===1)?'checked':''}><span>${esc(s)}</span></label>`).join('')}</div></fieldset><p class="size-help" id="size-help" hidden>Phom regular. S: 45–54 kg · M: 55–64 kg · L: 65–74 kg · XL: 75–85 kg. Thông số chỉ tham khảo; cân nhắc chiều cao và phom mong muốn.</p><button class="btn btn-dark full" ${p.stock<=0?'disabled':''}>${p.stock<=0?'Tạm hết hàng':'Thêm vào giỏ hàng'} ${icon('bag')}</button><p class="detail-note">${icon('return')} Đổi trả trong 7 ngày sau khi nhận hàng</p></form></div></div>`,true);
+}
+function normalizedLocalCart(items) {
+  if(!Array.isArray(items)) return [];
+  return items.filter(i=>i&&products.some(p=>p.id===i.id&&p.sizes.includes(i.size)&&p.colors.includes(i.color))&&Number.isInteger(i.qty)&&i.qty>0&&i.qty<=10).map(i=>{const p=products.find(p=>p.id===i.id);return {id:p.id,name:p.name,price:p.price,image:p.image,size:i.size,color:i.color,qty:i.qty};});
+}
+function saveCart() {
+  checkoutKey=null; updateHeader();
+  if(currentUser) { const snapshot=cart.map(i=>({...i})); pendingCart=pendingCart.catch(()=>{}).then(()=>api('cart',{items:snapshot})); pendingCart.catch(e=>toast('Chưa lưu được giỏ hàng: '+e.message)); }
+  else writeLocal('mono-cart',cart);
+}
+function cartTotal() { return cart.reduce((t,i)=>t+i.price*i.qty,0); }
+function renderCart() {
+  const total=cartTotal(), remaining=Math.max(0,799000-total);
+  $('#cart-content').innerHTML=cart.length?`<div class="shipping-progress"><p>${remaining?`Thêm <strong>${money(remaining)}</strong> để được miễn phí giao hàng.`:'Bạn đã được miễn phí giao hàng!'} ${icon('truck')}</p><div><span style="width:${Math.min(100,total/799000*100)}%"></span></div></div><div class="cart-items">${cart.map((i,n)=>`<article class="cart-item"><img src="${image(i.image,200)}" alt="${esc(i.name)}"><div><h3>${esc(i.name)}</h3><p>${esc(i.color)} / ${esc(i.size)}</p><strong>${money(i.price)}</strong><div class="quantity-control"><button data-qty="${n}" data-delta="-1" aria-label="Giảm số lượng">−</button><span>${i.qty}</span><button data-qty="${n}" data-delta="1" aria-label="Tăng số lượng" ${i.qty>=10?'disabled':''}>+</button></div></div><button class="remove-item" data-remove="${n}" aria-label="Xóa ${esc(i.name)}">${icon('close')}</button></article>`).join('')}</div><div class="cart-summary"><div><span>Tạm tính</span><strong>${money(total)}</strong></div><p>Phí vận chuyển được tính theo địa chỉ khi đặt hàng.</p><button class="btn btn-dark full" id="checkout-btn">Tiến hành đặt hàng ${icon('arrow')}</button><span class="secure-note">Thanh toán khi nhận hàng (COD)</span></div>`:empty('Giỏ hàng còn trống.','Thêm một món đồ yêu thích để bắt đầu.','<button class="btn btn-dark" id="continue-shopping">Khám phá bộ sưu tập '+icon('arrow')+'</button>');
+}
+function openCart() { renderCart(); if(!drawer.open) drawer.showModal(); }
+function requireAuth(next) { if(currentUser) { next(); return; } afterAuth=next; authMode='signin'; openAuth(); }
+function openAuth() {
+  const signup=authMode==='signup';
+  showModal(`${heading(signup?'Chào bạn mới.':'Mừng bạn trở lại.',signup?'Một tài khoản. Nhiều trải nghiệm cùng MONO.':'Đăng nhập để tiếp tục câu chuyện của bạn.')}<div class="auth-tabs"><button data-auth="signin" class="${signup?'':'active'}">Đăng nhập</button><button data-auth="signup" class="${signup?'active':''}">Đăng ký</button></div><form id="auth-form" class="stack-form">${signup?'<label>Họ và tên<input name="name" autocomplete="name" maxlength="80" required placeholder="Tên của bạn"></label>':''}<label>Email<input name="email" type="${signup?'email':'text'}" inputmode="email" autocomplete="${signup?'email':'username'}" required maxlength="254" placeholder="${signup?'ban@email.com':'Nhập email'}"></label><label>Mật khẩu<input name="password" type="password" autocomplete="${signup?'new-password':'current-password'}" ${signup?'minlength="8"':''} maxlength="200" required placeholder="${signup?'Ít nhất 8 ký tự':'Nhập mật khẩu'}"></label><p class="form-error" role="alert" id="form-error"></p><button class="btn btn-dark full">${signup?'Tạo tài khoản':'Đăng nhập'} ${icon('arrow')}</button></form><p class="form-footnote">Thông tin tài khoản và đơn hàng được lưu trên máy chủ của cửa hàng.</p>`);
+}
+function openAccount(view='home') {
+  requireAuth(()=>{
+    if(view==='orders') { openOrders(); return; }
+    if(view==='address') { openAddress(); return; }
+    showModal(`${heading('Xin chào, '+esc(currentUser.name)+'.','Một nơi cho mọi trải nghiệm của bạn.')}<div class="account-email">${esc(currentUser.email)}</div><div class="account-links"><button data-account-view="orders">${icon('box')} Đơn hàng & vận chuyển ${icon('arrow')}</button><button data-account-view="address">${icon('pin')} Địa chỉ nhận hàng ${icon('arrow')}</button><button id="my-listings-btn">${icon('leaf')} Bài đăng Secondhand của bạn ${icon('arrow')}</button></div><button class="text-btn logout-btn" id="logout-btn">Đăng xuất tài khoản</button>`);
+  });
+}
+function addressFields(a={}) { return `<div class="form-columns"><label>Họ tên người nhận<input name="name" autocomplete="name" value="${esc(a?.name||currentUser?.name||'')}" maxlength="80" required></label><label>Số điện thoại<input name="phone" type="tel" autocomplete="tel" value="${esc(a?.phone||'')}" placeholder="09xxxxxxxx" pattern="(0[0-9]{9}|\+84[0-9]{9})" maxlength="15" required></label></div><label>Địa chỉ cụ thể<input name="street" autocomplete="street-address" value="${esc(a?.street||'')}" placeholder="Số nhà, đường, phường/xã" maxlength="200" required></label><div class="form-columns"><label>Tỉnh / thành phố<input name="city" autocomplete="address-level1" value="${esc(a?.city||'')}" placeholder="VD: Thành phố Hồ Chí Minh" maxlength="100" required></label><label>Khu vực giao hàng<select name="region" required><option value="hcm" ${a?.region==='hcm'?'selected':''}>TP. Hồ Chí Minh · 25.000đ</option><option value="city" ${a?.region==='city'?'selected':''}>Hà Nội / Đà Nẵng · 35.000đ</option><option value="other" ${a?.region==='other'?'selected':''}>Tỉnh thành khác · 45.000đ</option></select></label></div>`; }
+function openAddress() { showModal(`${heading('Địa chỉ nhận hàng.','Lưu địa chỉ cho những lần đặt hàng tiếp theo.')}<form id="address-form" class="stack-form">${addressFields(currentUser.address)}<p class="form-error" role="alert" id="form-error"></p><button class="btn btn-dark">Lưu địa chỉ ${icon('check')}</button></form>`); }
+function shipping(region) { return cartTotal()>=799000?0:({hcm:25000,city:35000,other:45000}[region]||25000); }
+function openCheckout() {
+  drawer.close(); requireAuth(()=>{
+    if(!cart.length) { toast('Giỏ hàng đang trống.'); return; }
+    checkoutKey=checkoutKey||crypto.randomUUID();
+    showModal(`${heading('Gần đến tay bạn rồi.','Kiểm tra địa chỉ và hoàn tất đơn hàng.')}<form id="checkout-form" class="stack-form">${addressFields(currentUser.address)}<div class="checkout-items">${cart.map(i=>`<div><span>${esc(i.name)} <small>(${esc(i.size)}, ${esc(i.color)}) × ${i.qty}</small></span><strong>${money(i.price*i.qty)}</strong></div>`).join('')}</div><div class="checkout-totals"><div><span>Tạm tính</span><span>${money(cartTotal())}</span></div><div><span>Phí vận chuyển</span><span id="checkout-shipping"></span></div><div class="grand-total"><strong>Tổng thanh toán</strong><strong id="checkout-total"></strong></div></div><div class="payment-note">${icon('check')} Thanh toán khi nhận hàng (COD)</div><p class="form-footnote">Địa chỉ sẽ được lưu cho lần mua tiếp theo. Trạng thái giao hàng được cập nhật bởi cửa hàng; chưa kết nối hãng vận chuyển.</p><p class="form-error" role="alert" id="form-error"></p><button class="btn btn-dark full" id="place-order-btn">Xác nhận đặt hàng ${icon('arrow')}</button></form>`,true);
+    updateShipping();
+  });
+}
+function updateShipping() { const f=$('#checkout-form'); if(!f) return; const fee=shipping(f.elements.region.value); $('#checkout-shipping').textContent=fee?money(fee):'Miễn phí'; $('#checkout-total').textContent=money(cartTotal()+fee); }
+const statusNames={confirmed:'Chờ xử lý',processing:'Đang chuẩn bị',shipping:'Đang giao',delivered:'Đã giao',cancelled:'Đã hủy'};
+const returnNames={requested:'Đã tiếp nhận',accepted:'Đã duyệt — chờ nhận hàng trả',rejected:'Từ chối — vui lòng trao đổi với cửa hàng',completed:'Đã xử lý xong'};
+let adminProducts=[], adminTab='products', productPreviewUrl=null;
+function adminNavigation() {
+  return `<div class="admin-tabs" role="group" aria-label="Quản lý cửa hàng"><button class="btn ${adminTab==='products'?'btn-dark':'btn-outline'} small" data-admin-tab="products">Sản phẩm</button><button class="btn ${adminTab==='orders'?'btn-dark':'btn-outline'} small" data-admin-tab="orders">Đơn hàng & trả hàng</button></div>`;
+}
+async function refreshCatalog() {
+  const data=await api('bootstrap'); products=data.products; csrf=data.csrf;
+  cart=normalizedLocalCart(cart); renderProducts(); updateHeader();
+}
+function openProductEditor(id=0) {
+  const p=id?adminProducts.find(p=>p.id===id):{name:'',category:'Áo thun',audience:'unisex',price:'',old_price:'',stock:30,tag:'',colors:['Trắng','Đen'],sizes:['S','M','L','XL'],description:''};
+  if(!p) return;
+  if(productPreviewUrl) { URL.revokeObjectURL(productPreviewUrl); productPreviewUrl=null; }
+  showModal(`${heading(id?'Chỉnh sửa sản phẩm.':'Thêm sản phẩm.','Điền thông tin và chọn ảnh để bày bán tại cửa hàng.')}<form id="admin-product-form" class="stack-form"><input type="hidden" name="id" value="${id}"><label>Tên sản phẩm<input name="name" value="${esc(p.name)}" required maxlength="100"></label><div class="form-columns"><label>Danh mục<select name="category">${['Áo thun','Áo sơ mi','Áo khoác','Quần jeans','Quần âu','Quần short'].map(c=>`<option ${p.category===c?'selected':''}>${c}</option>`).join('')}</select></label><label>Đối tượng<select name="audience">${[['unisex','Unisex'],['nam','Nam'],['nữ','Nữ']].map(([v,label])=>`<option value="${v}" ${p.audience===v?'selected':''}>${label}</option>`).join('')}</select></label></div><div class="form-columns"><label>Giá bán (đ)<input name="price" type="number" min="1000" max="100000000" step="1" value="${p.price}" required></label><label>Giá gốc (đ, tùy chọn)<input name="old_price" type="number" min="1001" max="100000000" step="1" value="${p.old_price??''}" placeholder="Lớn hơn giá bán"></label></div><div class="form-columns"><label>Số lượng tồn kho<input name="stock" type="number" min="0" max="1000000" step="1" value="${p.stock}" required></label><label>Nhãn (tùy chọn)<input name="tag" maxlength="30" value="${esc(p.tag)}" placeholder="VD: MỚI"></label></div><label>Màu sắc, cách nhau bằng dấu phẩy<input name="colors" required maxlength="600" value="${esc(p.colors.join(', '))}" placeholder="Trắng, Đen, Be"></label><label>Kích cỡ, cách nhau bằng dấu phẩy<input name="sizes" required maxlength="600" value="${esc(p.sizes.join(', '))}" placeholder="S, M, L, XL"></label><label>Mô tả<textarea name="description" rows="4" required maxlength="2000">${esc(p.description)}</textarea></label><label>Ảnh sản phẩm<input name="image" id="product-image-input" type="file" accept="image/jpeg,image/png,image/webp" ${id?'':'required'} aria-describedby="product-image-help"></label><p class="form-footnote" id="product-image-help">JPG, PNG hoặc WebP, tối đa 5 MB và 6000 × 6000 pixel.${id?' Để trống để giữ ảnh hiện tại.':''}</p><img id="product-image-preview" class="admin-image-preview" ${p.image?`src="${image(p.image)}"`:'hidden'} alt="Ảnh sản phẩm xem trước"><p class="form-error" role="alert"></p><div class="admin-form-actions"><button type="submit" class="btn btn-dark">${id?'Lưu thay đổi':'Thêm và bày bán'}</button><button type="button" class="btn btn-outline" data-admin-tab="products">Quay lại</button></div></form>`,true);
+}
+async function openAdmin(tab=adminTab) {
+  adminTab=tab;
+  try {
+    if(tab==='products') {
+      const data=await api('admin/products'); adminProducts=data.products;
+      showModal(`${heading('Quản lý sản phẩm.','Thêm ảnh, chỉnh sửa thông tin và chọn sản phẩm bày bán.')}<div class="admin-tools">${adminNavigation()}<button class="text-btn" id="admin-logout">Khóa quản trị</button></div><div class="admin-catalog-heading"><p>${adminProducts.filter(p=>p.active).length} đang bày bán · ${adminProducts.length} sản phẩm</p><button class="btn btn-dark small" id="admin-add-product">+ Thêm sản phẩm</button></div><p class="form-footnote">Gỡ khỏi cửa hàng sẽ ẩn sản phẩm khỏi danh mục và ngừng nhận đơn mới. Đơn hàng đã đặt vẫn được giữ lại.</p><div class="admin-product-list">${adminProducts.length?adminProducts.map(p=>`<article class="admin-product-row"><img src="${image(p.image,150)}" alt="${esc(p.name)}"><div class="admin-product-info"><strong>${esc(p.name)}</strong><p>${esc(p.category)} · ${money(p.price)} · Tồn: ${p.stock}</p><span class="status-tag">${p.active?'Đang bày bán':'Đã gỡ khỏi cửa hàng'}</span></div><div class="admin-product-actions"><button class="btn btn-outline small" data-edit-product="${p.id}">Chỉnh sửa</button><button class="text-btn" data-product-visibility="${p.id}" data-active="${p.active?'0':'1'}">${p.active?'Gỡ khỏi cửa hàng':'Bày bán lại'}</button></div></article>`).join(''):empty('Chưa có sản phẩm.','Thêm sản phẩm đầu tiên để bắt đầu bày bán.')}</div>`,true);
+      return;
+    }
+    const data=await api('admin/orders');
+    const next={confirmed:['processing','Bắt đầu chuẩn bị'],processing:['shipping','Bàn giao vận chuyển'],shipping:['delivered','Xác nhận đã giao']};
+    showModal(`${heading('Quản lý cửa hàng.','Cập nhật theo tình trạng thực tế của đơn hàng.')}<div class="admin-tools">${adminNavigation()}<button class="text-btn" id="refresh-admin">Tải lại danh sách</button><button class="text-btn" id="admin-logout">Khóa quản trị</button></div>${data.orders.length?data.orders.map(o=>`<article class="order-card"><div class="order-heading"><strong>${esc(o.id)}</strong><span class="status-tag">${statusNames[o.status]}</span></div><p class="admin-order-info">${esc(o.address.name)} · ${esc(o.address.phone)}<br>${esc(o.address.street)}, ${esc(o.address.city)}<br>${esc(o.email)}</p><div class="admin-order-info">${o.items.map(i=>`${esc(i.name)} / ${esc(i.size)} / ${esc(i.color)} × ${i.qty}`).join('<br>')}</div><div class="order-bottom"><strong>COD: ${money(o.total)}</strong>${next[o.status]?`<button class="btn btn-dark small" data-admin-order="${esc(o.id)}" data-admin-next="${next[o.status][0]}">${next[o.status][1]}</button>`:''}</div>${o.return_status?`<div class="admin-return"><strong>Trả hàng: ${returnNames[o.return_status]||esc(o.return_status)}</strong><p>${esc(o.return_reason)}</p>${o.return_status==='requested'?`<button class="btn btn-outline small" data-admin-return="${esc(o.id)}" data-admin-next="accepted">Duyệt yêu cầu</button> <button class="text-btn" data-admin-return="${esc(o.id)}" data-admin-next="rejected">Từ chối</button>`:o.return_status==='accepted'?`<p class="form-footnote">Chỉ hoàn tất sau khi đã nhận hàng trả và xử lý hoàn tiền COD trực tiếp với khách.</p><button class="btn btn-outline small" data-admin-return="${esc(o.id)}" data-admin-next="completed">Xác nhận đã xử lý trả hàng</button>`:''}</div>`:''}</article>`).join(''):empty('Chưa có đơn hàng.','Các đơn hàng mới sẽ xuất hiện tại đây.')}`,true);
+  } catch(e) {
+    if(e.status===403) showModal(`${heading('Khu vực cửa hàng.','Nhập khóa quản trị do chủ cửa hàng cấu hình.')}<form id="admin-form" class="stack-form"><label>Khóa quản trị<input name="token" type="password" required minlength="24" autocomplete="off"></label><p class="form-error" role="alert" id="form-error"></p><button class="btn btn-dark full">Mở quản trị ${icon('arrow')}</button></form>`);
+    else toast(e.message);
+  }
+}
+async function openOrders() {
+  showModal(heading('Đơn hàng của bạn.')+'<p class="loading">Đang tải đơn hàng…</p>',true);
+  try {
+    ({orders}=await api('orders'));
+    if(!modal.open) return;
+    $('#modal-content').innerHTML=heading('Đơn hàng của bạn.','Mỗi món đồ, một hành trình đến với bạn.')+(orders.length?`<div class="order-list">${orders.map(o=>`<article class="order-card"><div class="order-heading"><div><strong>${esc(o.id)}</strong><small>${date(o.created_at)}</small></div><span class="status-tag ${esc(o.status)}">${statusNames[o.status]||esc(o.status)}</span></div>${o.items.map(i=>`<div class="order-item"><img src="${image(i.image,150)}" alt="${esc(i.name)}"><div><strong>${esc(i.name)}</strong><p>${esc(i.color)} / ${esc(i.size)} · SL: ${i.qty}</p></div><span>${money(i.price*i.qty)}</span></div>`).join('')}<div class="order-bottom"><strong>Tổng: ${money(o.total)}</strong><div><button class="btn btn-outline small" data-track="${esc(o.id)}">Theo dõi đơn</button>${o.status==='confirmed'?`<button class="text-btn" data-cancel="${esc(o.id)}">Hủy đơn</button>`:''}${o.status==='delivered'&&!o.return_status?`<button class="text-btn" data-return="${esc(o.id)}">Yêu cầu trả hàng</button>`:''}</div></div>${o.return_status?`<p class="return-status">${icon('return')} Yêu cầu trả hàng: ${returnNames[o.return_status]||esc(o.return_status)}</p>`:''}</article>`).join('')}</div>`:empty('Chưa có đơn hàng nào.','Bộ sưu tập của MONO đang chờ bạn khám phá.','<button class="btn btn-dark" data-close-shop>Mua sắm ngay '+icon('arrow')+'</button>'));
+  } catch(e) { showModal(heading('Không tải được đơn hàng.')+`<p class="form-error">${esc(e.message)}</p><button class="btn btn-dark" data-account-view="orders">Thử lại</button>`); }
+}
+function openTracking(id) {
+  const o=orders.find(o=>o.id===id); if(!o) return; const stage=['confirmed','processing','shipping','delivered'].indexOf(o.status);
+  showModal(`${heading('Hành trình đơn hàng.',esc(o.id))}<div class="tracking-status">${icon('truck')}<div><strong>${statusNames[o.status]}</strong><p>${o.status==='confirmed'?'Đơn hàng đã được ghi nhận, đang chờ cửa hàng xử lý.':o.status==='cancelled'?'Đơn hàng đã hủy. Bạn sẽ không bị tính phí.':o.status==='delivered'?'Đơn hàng đã được giao thành công.':'Cửa hàng đang chuẩn bị và giao đơn của bạn.'}</p></div></div>${o.status==='cancelled'?'':`<ol class="timeline">${[['confirmed','Đã ghi nhận đơn hàng',date(o.created_at)],['processing','Chuẩn bị hàng','Chờ cửa hàng cập nhật'],['shipping','Đang vận chuyển','Chờ bàn giao cho vận chuyển'],['delivered','Giao hàng thành công',o.delivered_at?date(o.delivered_at):'Chờ xác nhận giao hàng']].map((s,i)=>`<li class="${i<=stage?'done':''}"><span>${i<=stage?'✓':i+1}</span><div><strong>${s[1]}</strong><p>${i===0||i===3&&o.delivered_at?s[2]:i<=stage?'Đã cập nhật':s[2]}</p></div></li>`).join('')}</ol>`}<div class="address-summary">${icon('pin')}<div><strong>${esc(o.address.name)} · ${esc(o.address.phone)}</strong><p>${esc(o.address.street)}, ${esc(o.address.city)}</p><p>Phí vận chuyển: ${o.shipping?money(o.shipping):'Miễn phí'} · Thanh toán COD</p></div></div><p class="form-footnote">Trạng thái do cửa hàng cập nhật. Chưa tích hợp theo dõi trực tiếp từ hãng vận chuyển.</p><button class="btn btn-outline full" data-account-view="orders">Quay lại đơn hàng</button>`);
+}
+async function openCommunity(mine=false) {
+  $('#community').hidden=false;
+  $('#community').scrollIntoView({behavior:'smooth',block:'start'});
+  $('#listings').innerHTML='<p class="loading">Đang tải các món đồ…</p>';
+  try {
+    ({listings}=await api('listings')); const list=mine?listings.filter(l=>l.user_id===currentUser?.id):listings;
+    $('#listings').innerHTML=(mine?'<div class="community-filter">Bài đăng của bạn <button class="text-btn" id="all-listings-btn">Xem tất cả ↗</button></div>':'')+(list.length?list.map(l=>`<article class="listing-card"><button class="listing-image" data-thread="${l.id}"><img src="${image(l.image)}" alt="${esc(l.title)}" loading="lazy"><span class="product-tag">${l.status==='sold'?'ĐÃ BÁN':esc(l.condition)}</span></button><div class="listing-body"><span class="listing-seller">${esc(l.seller)}</span><button class="product-title" data-thread="${l.id}">${esc(l.title)}</button><div><strong>${money(l.price)}</strong><button class="text-btn" data-thread="${l.id}">${icon('message')} ${l.comments} trao đổi</button></div></div></article>`).join(''):empty('Chưa có bài đăng.','Hãy là người bắt đầu vòng đời tiếp theo cho món đồ của bạn.'));
+  } catch(e) { $('#listings').innerHTML=`<p class="form-error">${esc(e.message)}</p><button class="btn btn-outline" id="community-retry">Thử lại</button>`; }
+}
+function openListingForm() {
+  requireAuth(()=>showModal(`${heading('Trao thêm một vòng đời.','Đăng lại món đồ MONO mà bạn đã sử dụng.')}<form id="listing-form" class="stack-form"><label>Tiêu đề<input name="title" required maxlength="100" placeholder="Một món đồ đang tìm chủ mới…"></label><label>Sản phẩm MONO<select name="product_id">${products.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('')}</select></label><div class="form-columns"><label>Giá bán (đ)<input name="price" type="number" min="1000" max="10000000" step="1000" required placeholder="150000"></label><label>Tình trạng<select name="condition"><option>Như mới</option><option>Rất tốt</option><option>Tốt</option></select></label></div><label>Mô tả tình trạng, kích cỡ và cách giao nhận<textarea name="description" required maxlength="2000" rows="4" placeholder="Số lần mặc, khuyết điểm (nếu có), size, khu vực trao đổi…"></textarea></label><p class="form-footnote">Bài đăng sử dụng ảnh danh mục làm minh họa. Nội dung trao đổi là công khai; tránh đăng thông tin riêng tư.</p><p class="form-error" role="alert" id="form-error"></p><button class="btn btn-dark full">Đăng món đồ ${icon('arrow')}</button></form>`));
+}
+async function openThread(id) {
+  const l=listings.find(l=>l.id===id); if(!l) return;
+  showModal(`${heading(esc(l.title),esc(l.seller))}<div class="thread-product"><img src="${image(l.image,300)}" alt="${esc(l.title)}"><div><strong>${money(l.price)}</strong><span>${esc(l.condition)} · ${l.status==='sold'?'Đã bán':'Còn hàng'}</span><p>${esc(l.description)}</p></div></div><div class="thread-comments" id="thread-comments"><p>Đang tải trao đổi…</p></div>${!l.user_id?'<p class="form-footnote">Đây là bài minh họa, không nhận giao dịch hoặc bình luận.</p>':l.status==='sold'?'<p class="form-footnote">Món đồ đã tìm được chủ mới.</p>':`<form id="comment-form" class="stack-form"><input type="hidden" name="listing_id" value="${l.id}"><label>Trao đổi với người bán<textarea name="body" rows="2" maxlength="1000" required placeholder="Hỏi thêm về kích cỡ, tình trạng hoặc cách giao nhận…"></textarea></label><p class="form-error" role="alert" id="form-error"></p><button class="btn btn-dark">Gửi bình luận ${icon('message')}</button></form>`}${currentUser&&l.user_id===currentUser.id&&l.status==='available'?`<button class="btn btn-outline full sold-btn" data-sold="${l.id}">Đánh dấu đã bán</button>`:''}`);
+  try { const data=await api('comments?listing_id='+id); if($('#thread-comments')) $('#thread-comments').innerHTML=data.comments.length?data.comments.map(c=>`<article class="comment"><div><strong>${esc(c.name)}</strong><small>${date(c.created_at)}</small></div><p>${esc(c.body)}</p></article>`).join(''):'<p class="muted">Chưa có trao đổi nào. Bắt đầu cuộc trò chuyện nhé.</p>'; } catch(e) { if($('#thread-comments')) $('#thread-comments').textContent=e.message; }
+}
+function resetFilters() { activeCategory='all'; pantsType='all'; audience='all'; onlyFavorites=false; $('#search-input').value=''; renderProducts(); }
+document.addEventListener('click',async e=>{
+  const b=e.target.closest('button,a'); if(!b) return;
+  if(b.dataset.audience!==undefined) { audience=b.dataset.audience; onlyFavorites=false; renderProducts(); }
+  if(b.dataset.category) { activeCategory=b.dataset.category; renderProducts(); }
+  if(b.dataset.pants) { pantsType=b.dataset.pants; renderProducts(); }
+  if(b.hasAttribute('data-reset')) resetFilters();
+  if(b.dataset.product) openProduct(Number(b.dataset.product));
+  if(b.dataset.favorite) { const id=Number(b.dataset.favorite); favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id]; writeLocal('mono-favorites',favorites); renderProducts(); }
+  if(b.dataset.auth) { authMode=b.dataset.auth; openAuth(); }
+  if(b.dataset.accountView) openAccount(b.dataset.accountView);
+  if(b.hasAttribute('data-qty')) { const i=cart[Number(b.dataset.qty)]; if(!i) return; const qty=i.qty+Number(b.dataset.delta); if(qty<1) cart.splice(Number(b.dataset.qty),1); else i.qty=Math.min(10,qty); saveCart(); renderCart(); }
+  if(b.hasAttribute('data-remove')) { cart.splice(Number(b.dataset.remove),1); saveCart(); renderCart(); }
+  if(b.dataset.track) openTracking(b.dataset.track);
+  if(b.dataset.adminTab) await openAdmin(b.dataset.adminTab);
+  if(b.dataset.editProduct) openProductEditor(Number(b.dataset.editProduct));
+  if(b.dataset.productVisibility) {
+    const id=Number(b.dataset.productVisibility), active=b.dataset.active==='1';
+    if(!active) {
+      const p=adminProducts.find(p=>p.id===id);
+      showModal(`${heading('Gỡ sản phẩm khỏi cửa hàng?',esc(p.name))}<p class="form-footnote">Khách sẽ không thể đặt mới sản phẩm này. Đơn hàng cũ vẫn được giữ lại và bạn có thể bày bán lại bất cứ lúc nào.</p><div class="confirm-actions"><button class="btn btn-dark" data-confirm-visibility="${id}" data-active="0">Xác nhận gỡ</button><button class="btn btn-outline" data-admin-tab="products">Quay lại</button></div>`);
+    } else {
+      b.disabled=true;
+      try { await api('admin/products/visibility',{id,active}); await refreshCatalog(); await openAdmin('products'); toast('Đã bày bán lại sản phẩm.'); } catch(err) { b.disabled=false; toast(err.message); }
+    }
+  }
+  if(b.dataset.confirmVisibility) {
+    b.disabled=true;
+    try { await api('admin/products/visibility',{id:Number(b.dataset.confirmVisibility),active:false}); await refreshCatalog(); await openAdmin('products'); toast('Đã gỡ sản phẩm khỏi cửa hàng.'); } catch(err) { b.disabled=false; toast(err.message); }
+  }
+  if(b.dataset.adminOrder||b.dataset.adminReturn) { b.disabled=true; try { await api(b.dataset.adminOrder?'admin/status':'admin/return',{id:b.dataset.adminOrder||b.dataset.adminReturn,status:b.dataset.adminNext}); toast('Đã cập nhật.'); openAdmin(); } catch(err) { b.disabled=false; toast(err.message); } }
+  if(b.dataset.cancel) { showModal(`${heading('Hủy đơn hàng?','Đơn '+esc(b.dataset.cancel)+' sẽ được hủy và hoàn lại tồn kho.')}<div class="confirm-actions"><button class="btn btn-dark" data-confirm-cancel="${esc(b.dataset.cancel)}">Xác nhận hủy</button><button class="btn btn-outline" data-account-view="orders">Giữ đơn hàng</button></div>`); }
+  if(b.dataset.confirmCancel) { b.disabled=true; try { await api('cancel',{id:b.dataset.confirmCancel}); toast('Đã hủy đơn hàng.'); openOrders(); } catch(err) { b.disabled=false; toast(err.message); } }
+  if(b.dataset.return) showModal(`${heading('Yêu cầu trả hàng.','Áp dụng trong 7 ngày sau khi giao thành công.')}<form id="return-form" class="stack-form"><input type="hidden" name="id" value="${esc(b.dataset.return)}"><label>Lý do trả hàng<textarea name="reason" maxlength="1000" rows="4" required placeholder="Mô tả vấn đề để MONO hỗ trợ bạn…"></textarea></label><p class="form-error" role="alert" id="form-error"></p><button class="btn btn-dark">Gửi yêu cầu ${icon('return')}</button></form>`);
+  if(b.dataset.thread) openThread(Number(b.dataset.thread));
+  if(b.dataset.sold) { b.disabled=true; try { await api('sold',{id:Number(b.dataset.sold)}); modal.close(); toast('Đã đánh dấu món đồ đã bán.'); openCommunity(); } catch(err) { b.disabled=false; toast(err.message); } }
+  if(b.hasAttribute('data-close-shop')) { modal.close(); $('#shop').scrollIntoView({behavior:'smooth'}); }
+  switch(b.id) {
+    case 'cart-btn': openCart(); break;
+    case 'cart-close': drawer.close(); break;
+    case 'modal-close': modal.close(); break;
+    case 'account-btn': openAccount(); break;
+    case 'admin-btn': case 'refresh-admin': openAdmin(); break;
+    case 'admin-add-product': openProductEditor(); break;
+    case 'admin-logout': try { await api('admin/logout',{}); modal.close(); toast('Đã khóa quyền quản trị.'); } catch(err) { toast(err.message); } break;
+    case 'search-toggle': $('#search-bar').hidden=!$('#search-bar').hidden; if(!$('#search-bar').hidden) $('#search-input').focus(); break;
+    case 'search-close': $('#search-bar').hidden=true; $('#search-toggle').focus(); break;
+    case 'clear-filter': resetFilters(); break;
+    case 'favorites-filter': onlyFavorites=!onlyFavorites; renderProducts(); break;
+    case 'size-guide-btn': $('#size-help').hidden=!$('#size-help').hidden; break;
+    case 'continue-shopping': drawer.close(); $('#shop').scrollIntoView({behavior:'smooth'}); break;
+    case 'checkout-btn': openCheckout(); break;
+    case 'community-btn': case 'all-listings-btn': case 'community-retry': openCommunity(); break;
+    case 'new-listing-btn': openListingForm(); break;
+    case 'my-listings-btn': modal.close(); openCommunity(true); break;
+    case 'logout-btn':
+      b.disabled=true;
+      try { await pendingCart; const data=await api('logout',{}); csrf=data.csrf; currentUser=null; cart=[]; orders=[]; writeLocal('mono-cart',[]); updateHeader(); modal.close(); toast('Bạn đã đăng xuất. Hẹn gặp lại!'); } catch(err) { b.disabled=false; toast(err.message); } break;
+    case 'return-policy-btn': showModal(`${heading('Thoải mái chọn. An tâm đổi trả.')}<div class="policy-copy"><p>Bạn có thể gửi yêu cầu trả hàng trong <strong>7 ngày</strong> kể từ ngày giao thành công.</p><p>Sản phẩm cần còn nguyên tem, chưa qua giặt và chưa sử dụng; ngoại lệ với sản phẩm lỗi sẽ được cửa hàng kiểm tra.</p><p>Vào <strong>Tài khoản → Đơn hàng → Yêu cầu trả hàng</strong>, mô tả lý do. Cửa hàng sẽ kiểm tra và hướng dẫn gửi hàng, xác nhận chi phí cùng phương thức hoàn tiền trước khi bạn gửi.</p><p>Giao dịch Secondhand do người mua và người bán thỏa thuận trực tiếp, chưa có dịch vụ thanh toán hoặc bảo đảm giao dịch.</p></div>`); break;
+    case 'shipping-policy-btn': showModal(`${heading('Giao đến nơi bạn cần.')}<div class="policy-copy"><p>Phí giao hàng tiêu chuẩn cho đơn dưới 799.000đ:</p><div class="policy-row"><span>TP. Hồ Chí Minh</span><strong>25.000đ</strong></div><div class="policy-row"><span>Hà Nội / Đà Nẵng</span><strong>35.000đ</strong></div><div class="policy-row"><span>Các tỉnh thành khác</span><strong>45.000đ</strong></div><p><strong>Miễn phí giao hàng từ 799.000đ.</strong> Phí được hiển thị đầy đủ trước khi xác nhận đơn. Thanh toán khi nhận hàng (COD).</p><p>Đây là bảng phí cấu hình của cửa hàng, chưa kết nối báo giá hoặc trạng thái từ hãng vận chuyển.</p></div>`); break;
+  }
+});
+document.addEventListener('submit',async e=>{
+  const form=e.target, formId=form.getAttribute('id'); if(!formId) return; e.preventDefault(); const data=Object.fromEntries(new FormData(form)); const button=form.querySelector('button[type="submit"], button:not([type])'); const error=form.querySelector('.form-error');
+  if(formId==='add-cart-form') {
+    const p=products.find(p=>p.id===Number(data.id)), existing=cart.find(i=>i.id===p.id&&i.size===data.size&&i.color===data.color);
+    if(existing&&existing.qty>=10) { toast('Tối đa 10 sản phẩm cho một lựa chọn.'); return; }
+    if(existing) existing.qty++; else cart.push({id:p.id,name:p.name,price:p.price,image:p.image,size:data.size,color:data.color,qty:1}); saveCart(); modal.close(); openCart(); return;
+  }
+  if(formId==='comment-form'&&!currentUser) { const text=data.body,id=Number(data.listing_id); afterAuth=async()=>{await openThread(id);if($('#comment-form')) $('#comment-form').elements.body.value=text;}; authMode='signin'; openAuth(); return; }
+  if(button) button.disabled=true; if(error) error.textContent='';
+  try {
+    if(formId==='admin-form') { await api('admin/session',data); form.reset(); openAdmin(); }
+    if(formId==='admin-product-form') {
+      const file=form.elements.image.files[0];
+      if(file&&file.size>5*1024*1024) throw new Error('Ảnh tối đa 5 MB.');
+      const payload={...data,id:Number(data.id),price:Number(data.price),old_price:data.old_price===''?null:Number(data.old_price),stock:Number(data.stock),colors:data.colors.split(',').map(s=>s.trim()).filter(Boolean),sizes:data.sizes.split(',').map(s=>s.trim()).filter(Boolean)};
+      delete payload.image;
+      const upload=new FormData(); upload.set('product',JSON.stringify(payload)); if(file) upload.set('image',file);
+      await api('admin/products/save',upload); await refreshCatalog(); await openAdmin('products'); toast(data.id==='0'?'Đã thêm sản phẩm vào cửa hàng.':'Đã lưu thay đổi sản phẩm.');
+    }
+    if(formId==='auth-form') {
+      const guest=cart, result=await api(authMode,data); currentUser=result.user; csrf=result.csrf;
+      const merged=new Map(); for(const i of [...result.cart,...guest]) { const k=[i.id,i.size,i.color].join('|'); if(merged.has(k)) merged.get(k).qty=Math.min(10,merged.get(k).qty+i.qty); else merged.set(k,{...i}); }
+      cart=normalizedLocalCart([...merged.values()]); writeLocal('mono-cart',[]); saveCart(); modal.close(); toast('Chào '+currentUser.name+', mừng bạn đến MONO.'); const next=afterAuth; afterAuth=null; if(next) next();
+    }
+    if(formId==='address-form') { const result=await api('address',data); currentUser=result.user; modal.close(); toast('Đã lưu địa chỉ nhận hàng.'); }
+    if(formId==='checkout-form') {
+      await pendingCart; const result=await api('checkout',{address:data,items:cart,request_key:checkoutKey}); currentUser.address=data; cart=[]; checkoutKey=null; updateHeader();
+      showModal(`${heading('Cảm ơn bạn đã chọn MONO.','Đơn hàng '+esc(result.id)+' đã được ghi nhận.')}<div class="success-icon">${icon('check')}</div><p class="success-copy">Cửa hàng sẽ chuẩn bị những món đồ yêu thích của bạn. Theo dõi tiến trình trong mục đơn hàng.</p><button class="btn btn-dark full" data-account-view="orders">Xem đơn hàng ${icon('arrow')}</button>`); toast('Đặt hàng thành công!');
+    }
+    if(formId==='return-form') { await api('return',data); toast('Đã tiếp nhận yêu cầu trả hàng.'); openOrders(); }
+    if(formId==='listing-form') { await api('listings',{...data,price:Number(data.price),product_id:Number(data.product_id)}); modal.close(); toast('Món đồ của bạn đã được đăng.'); openCommunity(); }
+    if(formId==='comment-form') { await api('comments',{...data,listing_id:Number(data.listing_id)}); openThread(Number(data.listing_id)); }
+  } catch(err) { if(error&&error.isConnected) error.textContent=err.message; else toast(err.message); }
+  finally { if(button&&button.isConnected) button.disabled=false; }
+});
+$('#sort-select').addEventListener('change',renderProducts);
+$('#search-input').addEventListener('input',()=>{renderProducts(); if($('#search-input').value.length===1) $('#shop').scrollIntoView({behavior:'smooth'});});
+document.addEventListener('change',e=>{
+  if(e.target.name==='region') updateShipping();
+  if(e.target.id==='product-image-input') {
+    const file=e.target.files[0], preview=$('#product-image-preview');
+    if(productPreviewUrl) { URL.revokeObjectURL(productPreviewUrl); productPreviewUrl=null; }
+    if(file) {
+      if(file.size>5*1024*1024||!['image/jpeg','image/png','image/webp'].includes(file.type)) { e.target.value=''; preview.hidden=true; toast('Chọn ảnh JPG, PNG hoặc WebP tối đa 5 MB.'); return; }
+      productPreviewUrl=URL.createObjectURL(file); preview.src=productPreviewUrl; preview.hidden=false;
+    } else { const p=adminProducts.find(p=>p.id===Number(e.target.form.elements.id.value)); preview.hidden=!p; if(p) preview.src=image(p.image); }
+  }
+});
+modal.addEventListener('close',()=>{if(productPreviewUrl) { URL.revokeObjectURL(productPreviewUrl); productPreviewUrl=null; }});
+modal.addEventListener('close',()=>{if(!modal.open&&!currentUser) afterAuth=null;});
+for(const d of [modal,drawer]) d.addEventListener('click',e=>{ if(e.target===d) { const r=d.getBoundingClientRect(); if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom) d.close(); } });
+async function init() {
+  try {
+    const data=await api('bootstrap'); products=data.products; currentUser=data.user; csrf=data.csrf; cart=currentUser?data.cart:normalizedLocalCart(readLocal('mono-cart',[])); favorites=favorites.filter(id=>products.some(p=>p.id===id)); renderProducts(); updateHeader();
+  } catch(e) { $('#products').innerHTML=`<div class="connection-error">${icon('box')}<h3>Cửa hàng chưa kết nối được máy chủ.</h3><p>${esc(e.message)}</p><p>Mở trang qua <strong>http://127.0.0.1:8000</strong> sau khi khởi động PHP.</p><button class="btn btn-dark" id="retry-init">Thử kết nối lại</button></div>`; $('#retry-init').onclick=init; }
+}
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+name: mono-clothes
+
+services:
+  html:
+    image: mono-html:1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: html
+    ports:
+      - "127.0.0.1:${MONO_PORT:-8080}:80"
+    depends_on:
+      css:
+        condition: service_healthy
+      php:
+        condition: service_healthy
+    restart: unless-stopped
+
+  css:
+    image: mono-css:1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: css
+    restart: unless-stopped
+
+  php:
+    image: mono-php:1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: php
+    environment:
+      MONO_DATA_DIR: /var/lib/mono
+      MONO_ADMIN_TOKEN: "${MONO_ADMIN_TOKEN:-}"
+    volumes:
+      - mono_data:/var/lib/mono
+    restart: unless-stopped
+
+volumes:
+  mono_data:
